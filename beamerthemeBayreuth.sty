@@ -1,0 +1,28 @@
+\useinnertheme{rectangles}
+\useoutertheme{bayreuth}
+\usecolortheme{bayreuth}
+
+\usefonttheme{professionalfonts}
+\setbeamerfont{subtitle}{size*={9}{11}}
+\setbeamerfont{author}{parent=subtitle}
+\setbeamerfont{institute}{parent=subtitle, size*={9}{11}}
+\setbeamerfont{date}{parent=subtitle}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{
+	\usebeamerfont{title}
+	\usebeamercolor[fg]{title}
+	\inserttitle\\
+	
+	\vspace{10mm}
+	\hbox{
+		\begin{beamercolorbox}[wd=.5\textwidth, left]{subtitle}%
+			\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle
+		\end{beamercolorbox}%
+		\usebeamerfont{subtitle}\rule{0.25mm}{2em}
+		\begin{beamercolorbox}[wd=.5\textwidth, left]{}%
+			\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\\
+			\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute, am \usebeamerfont{date}\usebeamercolor[fg]{date}\insertshortdate
+		\end{beamercolorbox}
+	}
+}
